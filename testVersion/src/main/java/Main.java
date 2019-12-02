@@ -15,6 +15,7 @@ public class Main {
         gmB.setId(1);
         gmB.setIpAddress(GlobalController.getInstance().getIP().toString());
         gmB.setPort(5555);
+        gmB.setScore(4);
         gmB.setRole(SnakesProto.NodeRole.NORMAL);
 
         SnakesProto.GamePlayer player = gmB.build();
@@ -24,7 +25,7 @@ public class Main {
         gcB.setHeight(20);
         gcB.setFoodStatic(1);
         gcB.setFoodPerPlayer(2);
-        gcB.setDelayMs(1000);
+        gcB.setPingDelayMs(1000);
         gcB.setDeadFoodProb((float) 0.3);
 
         SnakesProto.GameConfig config = gcB.build();
@@ -47,8 +48,8 @@ public class Main {
         System.out.println(message.hasCanJoin());
 
         gm.setMsgSeq(1);
-        gm.setSenderId(1);
-        gm.setReceiverId(2);
+       // gm.setSenderId(1);
+       // gm.setReceiverId(2);
 
         gm.setAnnouncement(amB);
 
